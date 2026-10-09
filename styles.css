@@ -1,0 +1,213 @@
+/* Variables de Color */
+:root {
+    --color-fondo: #a9dbfc;
+    --color-texto: #1f2937;
+    --color-texto-suave: #4b5563;
+    --color-borde: #d1d5db;
+    --color-primario: #f97316;
+    --color-primario-hover: #bb4709;
+    --color-cabecera-tabla: #f0ece5;
+    --color-exito: #16a34a;
+    --color-error: #dc2626;
+    --sombra: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 0 2em;
+}
+
+
+.contenedor > p:nth-child(3) {
+    margin-top: 1em;
+    font-size: 1em;
+    color: var(--color-texto-suave);
+    text-align: center;
+}
+
+.aviso {
+    display: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.75em 1em;
+    border-radius: 0.5em;
+    background-color: var(--color-primario);
+    box-shadow: var(--sombra);
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--color-cabecera-tabla);
+}
+
+.aviso.visible {
+    display: block;
+}
+
+/* Estilos del encabezado y formulario */
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: .3em;
+}
+
+.encabezado h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.encabezado p {
+    font-size: 1em;
+    color: var(--color-texto-suave);
+    margin: 1em 0;
+    padding: 0 1em;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: #ffffff;
+    padding: 1.5em;
+    border-radius: .5em;
+    box-shadow: var(--sombra);
+    width: 100%;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.campo input {
+    width: 100%;
+    border: 1px solid var(--color-borde);
+    border-radius: .3em;
+    font-size: 1em;
+    padding: .75em .75em;
+    min-width: 0;
+}
+
+.campo input:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 1px;
+    border-color:var(--color-primario);
+}
+
+.btn-agregar {
+    background-color: var(--color-primario);
+    color: var(--color-cabecera-tabla);
+    border: none;
+    padding: .75em 1.5em;
+    border-radius: .3em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: var(--color-error);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilos de la tabla y resultados */
+
+.tabla-contenedor {
+    margin-top: 1em;
+    overflow-x: auto;
+}
+
+.tabla th {
+    background-color: var(--color-cabecera-tabla);
+    padding: .25em 1em;
+   
+}
+
+.tabla th, .tabla td {
+    background-color: var(--color-cabecera-tabla);
+    border-bottom: 1px solid var(--color-borde);
+    padding: .5em 1em;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+.resultado {
+    display: flex;
+    padding: 0.75em 1em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--color-cabecera-tabla);
+}
+
+/* Estilos de mensajes de error y éxito */
+
+.mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: var(--sombra);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn-agregar.exito {
+    background-color: var(--color-exito);
+}
+
+.btn-agregar.error {
+    background-color: var(--color-error);
+}
+
+/*Limpiar formulario con tecla ESC*/
+
+.limpiarformulario {
+    font-size: 0.5em;
+    color: var(--color-texto-suave);
+    margin-top: 1em;
+}
+
+kbd {
+    background-color: var(--color-cabecera-tabla);
+    padding: 0.1em 0.3em;
+    border-radius: 0.2em;
+    font-family: monospace;
+}
+
+
+
+
+
+
+

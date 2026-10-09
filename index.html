@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novena Entrega JS</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <main class="contenedor">
+
+        <header class="encabezado">  
+            <h1>Calculadora Costos Receta</h1>
+            <p>Agrega los ingredientes y sus costos para calcular el costo total de tu receta</p>
+        </header>
+
+        <div id="aviso" class="aviso"></div>
+
+        <form id="formulario" class="formulario">
+            <div class="campo">
+                <label for="nombreReceta">Coloca Nombre de la Receta</label>
+            <input type="text" id="nombreReceta" placeholder="Ej. Pizza Muzzarella">
+            </div>
+            <div class="campo">
+                <label for="nombre">Nombre del Ingrediente:</label>
+                <input type="text" id="nombre" placeholder="Ej. Harina Integral" required>
+            </div>
+            <div class="campo">
+                <label for="costoPorKilo">Costo por kilo ($)</label>
+                <input type="number" id="costoPorKilo" placeholder="Ej: 1000" min="0" step="0.01" required>
+            </div>
+            <div class="campo">
+                <label for="cantidadReceta">Cantidad usada (gramos)</label>
+                <input type="number" id="cantidadReceta" placeholder="Ej: 150" min="0" required>
+            </div>
+
+            <button type="submit" id="btnAgregar" class="btn-agregar">Agregar ingrediente</button>
+           
+        </form>
+
+        <p class="limpiarformulario">Apretá <kbd>Esc</kbd> para limpiar el formulario.</p>
+       
+        <table class="tabla-contenedor">
+            <table class="tabla">
+                <thead>
+                    <th>Nombre del Ingrediente</th>
+                    <th>Costo por Kilo ($)</th>
+                    <th>Cantidad Usada (g)</th>
+                    <th>Costo Individual ($)</th>
+                    <th>Eliminar</th>
+                </thead>
+                <tbody id="cuerpoTabla"></tbody>
+                <!--aca con JS sumamos los ingredientes-->
+            </table>
+        </table>
+
+        <div class="resultado">
+            <p>Costo Total de la Receta: $<span id="costoTotal">0.00</span></p>
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+
+
